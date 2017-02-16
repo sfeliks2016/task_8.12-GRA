@@ -167,14 +167,16 @@ function show() {
     gameOver = document.getElementById('js-gameover');
     
     if (computer.score == 10){
-        gameOver.innerHTML = 'wygrał komputer!';
-        //alert('wygral komputer!')
-       
+        //gameOver.innerHTML = 'wygrał komputer!';
+        alert('wygral komputer!');
         
+       gameState='ended';
+        setGameElements();
     } else if (player.score == 10) {
-        gameOver.innerHTML = 'Twoje zwyciestwo!!!';
-        //alert('Twoje zwyciestwo!')
-       
+        //gameOver.innerHTML = 'Twoje zwyciestwo!!!';
+        alert('Twoje zwyciestwo!');
+       gameState='ended';
+        setGameElements();
     }
    
 }
